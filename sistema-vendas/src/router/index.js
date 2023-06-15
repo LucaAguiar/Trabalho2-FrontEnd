@@ -1,7 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import MainView from "../views/MainView.vue";
-import SupliersComponent from "../components/SupliersComponent.vue";
+import SuppliersView from "../views/SuppliersView.vue";
+import ProductView from "../views/ProductView.vue";
+import SaleView from "../views/SaleView.vue";
 
 Vue.use(VueRouter);
 
@@ -13,7 +15,15 @@ const routes = [
         children: [
             {
                 path: "/",
-                component: SupliersComponent,
+                component: SuppliersView,
+            },
+            {
+                path: "/product",
+                component: ProductView,
+            },
+            {
+                path: "/sale",
+                component: SaleView,
             },
         ],
     },
